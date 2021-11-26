@@ -23,7 +23,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 			die();
 		}
 		$statement = $conexion -> prepare(
-			'SELECT * FROM usuarios WHERE UsuNombre = :usuario LIMIT 1');
+			'SELECT * FROM usuarios WHERE usuario = :usuario LIMIT 1');
 		$statement ->execute(array(':usuario'=>$usuario));
 		$resultado= $statement->fetch();
 
