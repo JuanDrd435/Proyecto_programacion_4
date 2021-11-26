@@ -32,8 +32,8 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 		}
 
 
-		$password = hash('sha512',$password);
-		$password2 = hash('sha512',$password2);
+		$password = ($password);
+		$password2 = ($password2);
 		if($password2 != $password){
 			$errores .= '<li>Las contraseñas no son iguales</li>';
 		}
