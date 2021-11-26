@@ -7,7 +7,7 @@
 					<div class="mensaje">
 						<h2>Sistema de Gestion de Centro Medico</h2>
 					</div>
-						<p><img src="img/icono.svg">
+						<p><img src="img/Logo 1 - copia.png">
 						</p><br/><br/>
 						<p>Bienvenido a <b>CenterMedicine</b>! un Sistema de Citas Medicas util para consultorios medicos y/o medicos independientes.</p>
 						<br/><br/>
