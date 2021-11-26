@@ -7,9 +7,9 @@
 					<div class="mensaje">
 						<h2>Sistema de Gestion de Centro Medico</h2>
 					</div>
-						<p><img src="img/Logo 1 - copia.png">
+						<p><img src="img/Logo 1.png" style="width:300px;height:300px;border-radius:250px;">
 						</p><br/><br/>
-						<p>Bienvenido a <b>CenterMedicine</b>! un Sistema de Citas Medicas util para consultorios medicos y/o medicos independientes.</p>
+						<p>Bienvenido a <b>Ciudadano Sano</b>! un Sistema de Citas Medicas util para consultorios medicos y/o medicos independientes.</p>
 						<br/><br/>
 						<h3>Nuestras funciones</h3><br/>
 						<p>	- Gestion de Citas <br/>
