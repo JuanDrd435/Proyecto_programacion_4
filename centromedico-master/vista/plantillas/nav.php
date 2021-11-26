@@ -7,7 +7,8 @@
 			<a href="consultorios.php" title="Consultorios">Consultorios</a>
             <a href="especialidades.php" >Especialidades</a>
 			<a href="usuarios.php" title="Usuarios">Usuarios</a>
-			<a href="paisCiudad.php" title="GestionPais">Gestion Geografica</a>
-            <a href="#" title="Reportes">Reportes</a>
+			<a href="paisCiudad.php" title="GestionPais">Gestion Pais</a>
+			<a href="Ciudad.php" title="GestionCiudad">Gestion Ciudades</a>
+	  <a href="#" title="Reportes">Reportes</a>
 	</div>
 </aside>
