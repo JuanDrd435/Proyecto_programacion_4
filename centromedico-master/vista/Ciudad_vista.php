@@ -37,8 +37,8 @@ if(!$consulta){
                             <?php echo "<td>". $Sql['ID_CIUDAD']. "</td>"; ?>
                             <?php echo "<td>". $Sql['NOMBRE']. "</td>"; ?>
                             
-                            <?php echo "<td class='centrar'>"."<a href='actualizarusuario.php?id=".$Sql['id']."' class='editar'>Editar</a>". "</td>"; ?>
-						  <?php echo "<td class='centrar'>"."<a href='eliminar_usuario.php?id=".$Sql['id']."' class='eliminar'>Eliminar</a>". "</td>"; ?>
+                            <?php echo "<td class='centrar'>"."<a href='actualizarciudad.php?id=".$Sql['ID_CIUDAD']."' class='editar'>Editar</a>". "</td>"; ?>
+						  <?php echo "<td class='centrar'>"."<a href='eliminar_usuario.php?id=".$Sql['ID_CIUDAD']."' class='eliminar'>Eliminar</a>". "</td>"; ?>
 						</tr>
 						<?php endforeach; ?>
 					</table>

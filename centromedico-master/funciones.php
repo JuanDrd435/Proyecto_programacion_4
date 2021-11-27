@@ -33,6 +33,12 @@
 		return ($resultado) ? $resultado : false;
         
     }
+	function obtenerCiudad_id($conexion,$id){
+        $resultado = $conexion->query("SELECT * FROM CIUDAD WHERE ID_CIUDAD = $id LIMIT 1");
+		$resultado = $resultado->fetchall();
+		return ($resultado) ? $resultado : false;
+        
+    }
 
     function obtener_consultorio_id($conexion,$id_consultorio){
         $resultado = $conexion->query("SELECT * FROM consultorios WHERE idConsultorio = $id_consultorio LIMIT 1");

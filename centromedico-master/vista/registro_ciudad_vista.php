@@ -20,7 +20,7 @@ $resultado = $resultado->fetchall();
 					</div>
 					<form class="login" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="post" name="login">
                             <h2>REGISTRAR CIUDAD</h2><br/>
-                            <select name="roll">
+                            <select name="pais">
                                 <?php
                                 $resultado = $conexion->query("SELECT * FROM PAIS ");
                                 $resultado = $resultado->fetchall();
