@@ -7,12 +7,12 @@ try{
 }
 
 $consulta = $conexion -> prepare("
-	SELECT * FROM usuarios limit 5");
+	SELECT * FROM CIUDAD limit 5");
 
 $consulta ->execute();
 $consulta = $consulta ->fetchAll();
 if(!$consulta){
-	$mensaje .= 'NO HAY USUARIOS PARA MOSTRAR';
+	$mensaje .= 'NO HAY CIUDADES PARA MOSTRAR';
 }
 ?>
 <?php include 'plantillas/header.php'; ?>
@@ -23,21 +23,20 @@ if(!$consulta){
 					<div class="mensaje">
 						<h2>Ciudades</h2>
 					</div>
-					<a class="agregar" href="registrarusuarios.php">Agregar Pais</a>
+					<a class="agregar" href="regitrarciudad.php">Agregar Ciudad</a>
 						<table class="tabla">
 						  <tr>
-							<th>Nombres</th>
-							<th>Apellidos</th>
-                            <th>Usuario</th>
-							<th>Roll</th>
-                            <th colspan="2">Opciones</th>
+							<th>ID PAIS</th>
+							<th>ID CIUDAD</th>
+                            <th>NOMBRE</th>
+							
 						  </tr>
 						<?php foreach ($consulta as $Sql): ?>
 						<tr>
-							<?php echo "<td>". $Sql['nombres']. "</td>"; ?>
-                            <?php echo "<td>". $Sql['apellidos']. "</td>"; ?>
-                            <?php echo "<td>". $Sql['usuario']. "</td>"; ?>
-                            <?php echo "<td>". $Sql['Roll']. "</td>"; ?>
+							<?php echo "<td>". $Sql['ID_PAIS']. "</td>"; ?>
+                            <?php echo "<td>". $Sql['ID_CIUDAD']. "</td>"; ?>
+                            <?php echo "<td>". $Sql['NOMBRE']. "</td>"; ?>
+                            
                             <?php echo "<td class='centrar'>"."<a href='actualizarusuario.php?id=".$Sql['id']."' class='editar'>Editar</a>". "</td>"; ?>
 						  <?php echo "<td class='centrar'>"."<a href='eliminar_usuario.php?id=".$Sql['id']."' class='eliminar'>Eliminar</a>". "</td>"; ?>
 						</tr>

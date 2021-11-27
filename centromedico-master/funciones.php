@@ -50,4 +50,10 @@
 		return ($resultado) ? $resultado : false;
     }
 
+	function buscar_pais($conexion){
+        $resultado = $conexion->query("SELECT * FROM PAIS");
+		$resultado = $resultado->fetchall();
+		return ($resultado) ? $resultado : false;
+    }
+
 ?>
