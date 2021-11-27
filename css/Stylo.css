@@ -7,11 +7,12 @@
 #siderbar {
     width: 320px;
     height: 100%;
-    background-color: #293039;
+    background-color: blanchedalmond;
     position: fixed;
     left: 0;
     top: 0;
     right: 0;
+    background: #fff;
   }
   
 
@@ -51,7 +52,13 @@ a {
     padding: 20px 0px 10px 10px ;
 }
 
-
+article {
+    float: left;
+    padding: 20px;
+    width: 70%;
+    background-color: #f1f1f1;
+    height: 300px; /* only for demonstration, should be removed */
+  }
 
 p{
     padding: 0px 50px 0px 370px;
@@ -76,12 +83,18 @@ h1 {
 
     text-align: center;
 }
+h3 {
+    font-size: 60px;
+    color: #29B3BA;
+    padding: 20px 50px 0px 370px;
 
+    text-align: center;
+}
 .table {
     width: 50%;
-    background: rgb(19, 16, 22, 0.8);
+    background:blanchedalmond;
     margin: 20px 60px 0px 480px;
-
+    background-color: #fff;
 
 
 }
