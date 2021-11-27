@@ -24,6 +24,7 @@ if(!$consulta){
 						<h2>USUARIOS</h2>
 					</div>
 					<a class="agregar" href="registrarusuarios.php">Agregar Usuarios</a>
+					<a class="agregar" href="reportes.php">Reportes usuarios</a>
 						<table class="tabla">
 						  <tr>
 							<th>Nombres</th>
