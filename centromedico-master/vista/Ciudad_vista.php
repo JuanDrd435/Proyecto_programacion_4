@@ -21,7 +21,7 @@ if(!$consulta){
 			<?php include 'plantillas/nav.php'; ?>
 				<article>
 					<div class="mensaje">
-						<h2>USUARIOS</h2>
+						<h2>Ciudades</h2>
 					</div>
 					<a class="agregar" href="registrarusuarios.php">Agregar Pais</a>
 						<table class="tabla">

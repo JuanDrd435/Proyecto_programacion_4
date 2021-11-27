@@ -7,12 +7,12 @@ try{
 }
 
 $consulta = $conexion -> prepare("
-	SELECT * FROM usuarios limit 5");
+	SELECT * FROM PAIS limit 5");
 
 $consulta ->execute();
 $consulta = $consulta ->fetchAll();
 if(!$consulta){
-	$mensaje .= 'NO HAY USUARIOS PARA MOSTRAR';
+	$mensaje .= 'NO HAY PAISES PARA MOSTRAR';
 }
 ?>
 <?php include 'plantillas/header.php'; ?>
@@ -21,25 +21,20 @@ if(!$consulta){
 			<?php include 'plantillas/nav.php'; ?>
 				<article>
 					<div class="mensaje">
-						<h2>USUARIOS</h2>
+						<h2>Paises</h2>
 					</div>
-					<a class="agregar" href="registrarusuarios.php">Agregar Usuarios</a>
+					<a class="agregar" href="registrapais.php">Agregar Pais</a>
 						<table class="tabla">
 						  <tr>
-							<th>Nombres</th>
-							<th>Apellidos</th>
-                            <th>Usuario</th>
-							<th>Roll</th>
-                            <th colspan="2">Opciones</th>
-						  </tr>
+				       	<th>Codigo</th> 
+							<th>Nombre</th>
+                          </tr>
 						<?php foreach ($consulta as $Sql): ?>
 						<tr>
-							<?php echo "<td>". $Sql['nombres']. "</td>"; ?>
-                            <?php echo "<td>". $Sql['apellidos']. "</td>"; ?>
-                            <?php echo "<td>". $Sql['usuario']. "</td>"; ?>
-                            <?php echo "<td>". $Sql['Roll']. "</td>"; ?>
-                            <?php echo "<td class='centrar'>"."<a href='actualizarusuario.php?id=".$Sql['id']."' class='editar'>Editar</a>". "</td>"; ?>
-						  <?php echo "<td class='centrar'>"."<a href='eliminar_usuario.php?id=".$Sql['id']."' class='eliminar'>Eliminar</a>". "</td>"; ?>
+						<?php echo "<td>". $Sql['ID_PAIS']. "</td>"; ?>
+                            <?php echo "<td>". $Sql['NOMBRE']. "</td>"; ?>
+                            <?php echo "<td class='centrar'>"."<a href='actualizarpais.php?ID_PAIS=".$Sql['ID_PAIS']."' class='editar'>Editar</a>". "</td>"; ?>
+						  <?php echo "<td class='centrar'>"."<a href='eliminar_usuario.php?ID_PAIS=".$Sql['ID_PAIS']."' class='eliminar'>Eliminar</a>". "</td>"; ?>
 						</tr>
 						<?php endforeach; ?>
 					</table>

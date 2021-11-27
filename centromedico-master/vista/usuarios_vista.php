@@ -38,7 +38,7 @@ if(!$consulta){
                             <?php echo "<td>". $Sql['apellidos']. "</td>"; ?>
                             <?php echo "<td>". $Sql['usuario']. "</td>"; ?>
                             <?php echo "<td>". $Sql['Roll']. "</td>"; ?>
-                            <?php echo "<td class='centrar'>"."<a href='actualizarusuario.php?id=".$Sql['id']."' class='editar'>Editar</a>". "</td>"; ?>
+                            <?php echo "<td class='centrar'>"."<a href='actualizarusuario.php' class='editar'>Editar</a>". "</td>"; ?>
 						  <?php echo "<td class='centrar'>"."<a href='eliminar_usuario.php?id=".$Sql['id']."' class='eliminar'>Eliminar</a>". "</td>"; ?>
 						</tr>
 						<?php endforeach; ?>

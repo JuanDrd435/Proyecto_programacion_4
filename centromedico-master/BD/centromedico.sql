@@ -80,4 +80,6 @@ INSERT INTO `usuarios` (`id`,`usuario`,`pass`,`nombres`,`apellidos`,`Roll`) VALU
 
 ALTER TABLE `citas`
   MODIFY `idcita` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+ CREATE TABLE PAIS(ID_PAIS VARCHAR(10) NOT NULL PRIMARY KEY , NOMBRE VARCHAR(20)); 
 COMMIT;

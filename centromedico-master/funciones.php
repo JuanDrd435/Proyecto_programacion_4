@@ -27,6 +27,13 @@
 		return ($resultado) ? $resultado : false;
         
     }
+	function obtenerPais_id($conexion,$id){
+        $resultado = $conexion->query("SELECT * FROM PAIS WHERE ID_PAIS = $id LIMIT 1");
+		$resultado = $resultado->fetchall();
+		return ($resultado) ? $resultado : false;
+        
+    }
+
     function obtener_consultorio_id($conexion,$id_consultorio){
         $resultado = $conexion->query("SELECT * FROM consultorios WHERE idConsultorio = $id_consultorio LIMIT 1");
 		$resultado = $resultado->fetchall();

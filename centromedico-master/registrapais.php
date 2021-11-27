@@ -5,14 +5,11 @@ if(!isset($_SESSION['usuario'])){
 
 
 if($_SERVER['REQUEST_METHOD']=='POST'){
-	$usuario = filter_var(strtolower($_POST['usuario']),FILTER_SANITIZE_STRING);
-	$password = $_POST['password'];
-	$password2 = $_POST['password2'];
-    $nombres = $_POST['nombres'];
-    $apellidos = $_POST['apellidos'];
-    $roll = $_POST['roll'];
-	$errores ='';
-	if(empty($usuario) or empty($password)){
+	$id = $_POST['codigo'];
+	//$id = filter_var(strtolower($_POST['codigo']),FILTER_SANITIZE_STRING);
+	$nombre = $_POST['nombre'];
+	
+	if(empty($id) or empty($nombre)){
 		$errores.= '<li>Por favor rellena todos los tados correctamente</li>';
 	}
 	else{
@@ -23,34 +20,28 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 			die();
 		}
 		$statement = $conexion -> prepare(
-			'SELECT * FROM usuarios WHERE usuario = :usuario LIMIT 1');
-		$statement ->execute(array(':usuario'=>$usuario));
+			'SELECT * FROM PAIS WHERE ID_PAIS = :pais LIMIT 1');
+		$statement ->execute(array(':pais'=>$id));
 		$resultado= $statement->fetch();
 
 		if($resultado != false){
-			$errores .='<li>El nombre de usuario ya existe</li>';
+			$errores .='<li>El Pais  ya existe</li>';
 		}
 
 
-		$password = ($password);
-		$password2 = ($password2);
-		if($password2 != $password){
-			$errores .= '<li>Las contraseñas no son iguales</li>';
-		}
+	
 	}
 
 	if($errores==''){
 		$statement = $conexion->prepare(
-			'INSERT INTO usuarios VALUES
-            (null,:usuario,:pass, :nombres, :apellidos,:roll)');
+			'INSERT INTO PAIS VALUES
+            (:id,:nombre)');
 		$statement-> execute(array(
-			':usuario' => $usuario,
-			':pass'=> $password2,
-            ':nombres'=> $nombres,
-            ':apellidos'=> $apellidos,
-            ':roll'=> $roll
+			':id' => $id,
+			':nombre'=> $nombre,
+           
 			));
-		header('Location: usuarios.php');
+		header('Location: paisCiudad.php');
 	}
 }
 require 'vista/registro_pais_vista.php';
